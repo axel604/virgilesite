@@ -1,37 +1,45 @@
 import os
 import re
 
-def patch_img_links(filepath, relpath):
+def patch_nav_links(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
-    patched = content
 
-    # Compte le niveau de profondeur du fichier
-    depth = relpath.count(os.sep)
-    # On ne patch que si ce n'est pas à la racine (root)
-    if depth > 0:
-        # Pour chaque <img src="images/...">, on ajoute les ../ nécessaires
-        patched = re.sub(
-            r'src="images/', f'src="{"../" * depth}images/', patched
-        )
-        # Pour chaque <img src="favicon/...
-        patched = re.sub(
-            r'src="favicon/', f'src="{"../" * depth}favicon/', patched
-        )
-        # Tu peux ajouter d'autres patchs si tu as d'autres dossiers d'assets
+    original = content
 
-    if patched != content:
+    # 1. Supprimer slash initial sur les liens href internes (menu, footer, etc)
+    # mais NE PAS toucher aux liens commençant par // ou http
+    content = re.sub(r'href="/(?!/|http)', 'href="', content)
+
+    # 2. Remplacer blog.html par blog/
+    content = re.sub(r'href="blog\.html"', 'href="blog/"', content)
+
+    # 3. Remplacer href="#contact" par contact.html (menu)
+    content = re.sub(r'href="#contact"', 'href="contact.html"', content)
+
+    # 4. Remplacer les sous-pages .html par / pour dossiers (menu typique)
+    for page in ["nourrissons", "sportifs", "seniors", "quotidien"]:
+        # href="sportifs.html" → href="sportifs/"
+        content = re.sub(
+            rf'href="{page}\.html"', 
+            f'href="{page}/"', 
+            content
+        )
+
+    # 5. Bonus : remettre .html uniquement sur les pages de la racine
+    # (C'est optionnel et à ajuster selon tes besoins)
+
+    if original != content:
         print(f"Patched: {filepath}")
         with open(filepath, "w", encoding="utf-8") as f:
-            f.write(patched)
+            f.write(content)
 
 def patch_all_html(root):
     for dirpath, dirnames, filenames in os.walk(root):
         for file in filenames:
             if file.endswith(".html"):
-                relpath = os.path.relpath(os.path.join(dirpath, file), root)
-                patch_img_links(os.path.join(dirpath, file), relpath)
+                patch_nav_links(os.path.join(dirpath, file))
 
 if __name__ == "__main__":
     patch_all_html(".")
-    print("Tous les chemins d’images ont été adaptés selon la profondeur du fichier !")
+    print("Tous les menus/footers ont été patchés !")
