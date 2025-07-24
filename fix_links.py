@@ -1,15 +1,29 @@
 import os
 import re
 
-def patch_links_in_file(filepath):
+def patch_img_links(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Patch tous les chemins qui commencent par / et qui ne sont pas des URL externes
-    # Pour les balises src et href
-    content_patched = re.sub(r'((src|href)=["\'])/(?!/|[a-zA-Z]+:)', r'\1', content)
+    # Patch tous les chemins Windows absolus pour images
+    content_patched = re.sub(
+        r'src="C:\\\\Users\\\\sisit\\\\Desktop\\\\Virgilesite\\\\images\\\\([^"]+)"',
+        r'src="images/\1"',
+        content
+    )
+    # Patch aussi les variantes sans échappement double
+    content_patched = re.sub(
+        r'src="C:\\Users\\sisit\\Desktop\\Virgilesite\\images\\([^"]+)"',
+        r'src="images/\1"',
+        content_patched
+    )
 
-    # Optionnel : tu peux ajouter d'autres patterns si besoin
+    # Patch aussi pour les balises <img src='...'>
+    content_patched = re.sub(
+        r"src='C:\\Users\\sisit\\Desktop\\Virgilesite\\images\\([^']+)'",
+        r"src='images/\1'",
+        content_patched
+    )
 
     if content != content_patched:
         print(f"Patched: {filepath}")
@@ -20,8 +34,8 @@ def patch_all_html(root):
     for dirpath, dirnames, filenames in os.walk(root):
         for file in filenames:
             if file.endswith(".html"):
-                patch_links_in_file(os.path.join(dirpath, file))
+                patch_img_links(os.path.join(dirpath, file))
 
 if __name__ == "__main__":
     patch_all_html(".")
-    print("Tous les fichiers HTML ont été patchés !")
+    print("Tous les liens d’images ont été patchés !")
