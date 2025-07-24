@@ -7,76 +7,76 @@
 
   <!-- Page d'accueil -->
   <url>
-    <loc>https://virgilesite.github.io/</loc>
+    <loc>https://axel1604.github.io/virgilesite/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
 
   <!-- Pages principales -->
   <url>
-    <loc>https://virgilesite.github.io/services.html</loc>
+    <loc>https://axel1604.github.io/virgilesite/services.html</loc>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/nourrissons/</loc>
+    <loc>https://axel1604.github.io/virgilesite/nourrissons/</loc>
     <priority>0.90</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/sportifs/</loc>
+    <loc>https://axel1604.github.io/virgilesite/sportifs/</loc>
     <priority>0.90</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/seniors/</loc>
+    <loc>https://axel1604.github.io/virgilesite/seniors/</loc>
     <priority>0.90</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/quotidien/</loc>
+    <loc>https://axel1604.github.io/virgilesite/quotidien/</loc>
     <priority>0.90</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/partenariats.html</loc>
+    <loc>https://axel1604.github.io/virgilesite/partenariats.html</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/contact.html</loc>
+    <loc>https://axel1604.github.io/virgilesite/contact.html</loc>
     <priority>0.95</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/mentions-legales.html</loc>
+    <loc>https://axel1604.github.io/virgilesite/mentions-legales.html</loc>
     <priority>0.40</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/confidentialite.html</loc>
+    <loc>https://axel1604.github.io/virgilesite/confidentialite.html</loc>
     <priority>0.40</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <!-- Blog et articles -->
   <url>
-    <loc>https://virgilesite.github.io/blog/</loc>
+    <loc>https://axel1604.github.io/virgilesite/blog/</loc>
     <priority>0.85</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/blog/article1.html</loc>
+    <loc>https://axel1604.github.io/virgilesite/blog/article1.html</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/blog/article2.html</loc>
+    <loc>https://axel1604.github.io/virgilesite/blog/article2.html</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://virgilesite.github.io/blog/article3.html</loc>
+    <loc>https://axel1604.github.io/virgilesite/blog/article3.html</loc>
     <priority>0.80</priority>
     <changefreq>monthly</changefreq>
   </url>
