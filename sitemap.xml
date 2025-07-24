@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://virgilesite.github.io/</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+
+  <!-- Pages principales -->
+  <url>
+    <loc>https://virgilesite.github.io/services.html</loc>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/nourrissons/</loc>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/sportifs/</loc>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/seniors/</loc>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/quotidien/</loc>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/partenariats.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/contact.html</loc>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/mentions-legales.html</loc>
+    <priority>0.40</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/confidentialite.html</loc>
+    <priority>0.40</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Blog et articles -->
+  <url>
+    <loc>https://virgilesite.github.io/blog/</loc>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/blog/article1.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/blog/article2.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://virgilesite.github.io/blog/article3.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+</urlset>

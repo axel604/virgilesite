@@ -1,0 +1,42 @@
+# robots.txt pour virgilesite.github.io
+
+# Autorise tous les moteurs de recherche à indexer le site
+User-agent: *
+Allow: /
+
+# Bloque l'indexation des fichiers système ou temporaires (modifie si besoin)
+Disallow: /README.md
+Disallow: /CNAME
+Disallow: /LICENSE
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /draft/
+Disallow: /test/
+Disallow: /private/
+
+# Empêche l’indexation des pages en construction (modifie ou retire si tu n'en as pas)
+Disallow: /en-construction/
+Disallow: /wip/
+Disallow: /backup/
+
+# Précise l’emplacement du sitemap pour Google & autres moteurs
+Sitemap: https://virgilesite.github.io/sitemap.xml
+
+# Facilite l'accès aux Googlebots et Bingbot (crawl-delay faible ou inexistant)
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+# Optimisation pour Google Images (optionnel)
+User-agent: Googlebot-Image
+Allow: /
+
+# Bloque les robots inutiles ou spammeurs connus (optionnel, adapte si tu as des besoins particuliers)
+User-agent: AhrefsBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+
+# End of file
